@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: functiondeploy-service
+spec:
+  selector:
+    app: functiondeploy-handler
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer

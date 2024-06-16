@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: functiondeploy-handler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: functiondeploy-handler
+  template:
+    metadata:
+      labels:
+        app: functiondeploy-handler
+    spec:
+      containers:
+      - name: handler
+        image: your-dockerhub-username/functiondeploy:latest
+        ports:
+        - containerPort: 8080

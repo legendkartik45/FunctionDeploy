@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FunctionDeploy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        #functionForm {
+            margin-bottom: 20px;
+        }
+        
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+        
+        #invokeForm {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Enter Your Function Code</h1>
+    <form id="functionForm">
+        <label for="language">Select Language:</label>
+        <select id="language">
+            <option value="go">Go</option>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+        </select><br><br>
+        <label for="method">Select HTTP Method:</label>
+        <select id="method">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+        </select><br><br>
+        <textarea id="functionCode" rows="20" cols="80"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="status"></div>
+    <form id="invokeForm">
+        <h2>Invoke Deployed Function</h2>
+        <button type="submit">Invoke</button>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>
